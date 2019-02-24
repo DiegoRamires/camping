@@ -1,6 +1,6 @@
 RESTfull Routes
 ____________________________________________________________________________________________________________
-|name     |   url                  | HTTP Verb  |   desription                                              |
+|name     |   url                  | HTTP Verb  |   description                                             |
 |---------|------------------------|------------|-----------------------------------------------------------|
 |INDEX    |   /camgrounds          |   GET      |   Display a list of all campgrounds                       |
 |NEW      |   /camgrounds/new      |   GET      |   Display a form to make a new dog                        |
