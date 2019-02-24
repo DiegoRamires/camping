@@ -33,7 +33,7 @@ yarn install
 #### Start database
 
 ```
-mongod
+sudo mongod
 or
 sudo mongod --dbpath=/var/lib/mongodb
 ```
