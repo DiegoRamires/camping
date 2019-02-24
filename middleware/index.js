@@ -1,27 +1,27 @@
-var Campground = require("../models/campground")
-var Comment = require("../models/comment")
-var middlewareObj = {};
+const Campground = require("../models/campground")
+const Comment = require("../models/comment")
+const middlewareObj = {}
 
 middlewareObj.checkCampgroundOwnership = function(req, res, next) {
   if (req.isAuthenticated()) {
     Campground.findById(req.params.id, function (err, foundCampground) {
       if (err) {
-        req.flash("error", "Campground not found");
+        req.flash("error", "Campground not found")
         res.redirect("back")
       } else {
         if (foundCampground.author.id.equals(req.user._id)) {
-          next();
+          next()
         } else {
-          req.flash("error", "You don't have permission to do that");
-          res.redirect("back");
+          req.flash("error", "You don't have permission to do that")
+          res.redirect("back")
         }
       }
-    });
+    })
   } else {
-    req.flash("error", "You need to be logged in to do that");
-    res.redirect("back");
+    req.flash("error", "You need to be logged in to do that")
+    res.redirect("back")
   }
-};
+}
 
 middlewareObj.checkCommentOwnership = function(req, res, next) {
   if (req.isAuthenticated()) {
@@ -30,25 +30,25 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
         res.redirect("back")
       } else {
         if (foundComment.author.id.equals(req.user._id)) {
-          next();
+          next()
         } else {
           req.flash("error", "You don't have permission to do that")
-          res.redirect("back");
+          res.redirect("back")
         }
       }
-    });
+    })
   } else {
-    req.flash("error", "You need to be logged in to do that");
-    res.redirect("back");
+    req.flash("error", "You need to be logged in to do that")
+    res.redirect("back")
   }
 }
 
 middlewareObj.isLoggedIn = function(req, res, next) {
   if (req.isAuthenticated()) {
-    return next();
+    return next()
   }
-  req.flash("error", "You need to be logged in to do that");
-  res.redirect("/login");
-};
+  req.flash("error", "You need to be logged in to do that")
+  res.redirect("/login")
+}
 
 module.exports = middlewareObj
