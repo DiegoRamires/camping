@@ -1,7 +1,7 @@
 RESTfull Routes
 ____________________________________________________________________________________________________________
 |name     |   url                  | HTTP Verb  |   desription                                              |
-|===========================================================================================================|
+|---------|------------------------|------------|-----------------------------------------------------------|
 |INDEX    |   /camgrounds          |   GET      |   Display a list of all campgrounds                       |
 |NEW      |   /camgrounds/new      |   GET      |   Display a form to make a new dog                        |
 |CREATE   |   /camgrounds          |   POST     |   Add a new camogroung to DB                              |
@@ -11,7 +11,7 @@ ________________________________________________________________________________
 |DESTROY  |   /camgrounds/:id      |   DELETE   |   Delete a particular campground, then redirect somewhere |
 -------------------------------------------------------------------------------------------------------------
 
-### Dependencias:
+#### Dependencies:
 
 ```
 node 10.8.0
@@ -19,20 +19,29 @@ npm ou yarn
 mongodb
 ```
 
-### Instalation:
+#### Project instalation:
 
-git clone
-cd yelpCamp
+```
+git clone https://github.com/DiegoRamires/camping
+cd camping
 yarn install
+```
 
-run
-  sudo mongod --dbpath=/var/lib/mongodb
-    or
-  mongod
-to run server in background
+#### Start database
 
-run yelpCamp server 
-npm run start
+```
+mongod
+or
+sudo mongod --dbpath=/var/lib/mongodb
+```
 
-### See aplication running 
-localhost:3000
+#### And then run server on other terminal tab
+
+```
+yarn start
+or
+npm start
+```
+
+#### See aplication running
+visit the url => `localhost:3000`
