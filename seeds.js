@@ -1,8 +1,8 @@
-var mongoose   = require("mongoose");
-var Campground = require("./models/campground");
-var Comment    = require("./models/comment");
+const mongoose   = require("mongoose")
+const Campground = require("./models/campground")
+const Comment    = require("./models/comment")
 
-var data = [
+const data = [
   {
     name: "Moon Camp",
     image: "https://farm8.staticflickr.com/7381/9705573948_3f342901d1.jpg",
@@ -24,16 +24,16 @@ function seedDB() {
   // Remove all campgrounds
   Campground.remove({}, function(err){
     if(err){
-      console.log(err);
+      console.log(err)
     }
-    console.log("Deleted all campgrounds!");
+    console.log("Deleted all campgrounds!")
     // add a few campgrounds
     data.forEach(function(seed){
       Campground.create(seed, function(err, campground){
         if(err){
           console.log(err)
         } else {
-          console.log("Added a new campground");
+          console.log("Added a new campground")
           // create a comment
           Comment.create(
             {
@@ -41,17 +41,17 @@ function seedDB() {
               author: "Hommer"
             }, function(err, comment){
               if(err){
-                console.log(err);
+                console.log(err)
               } else {
-                campground.comments.push(comment);
-                campground.save();
+                campground.comments.push(comment)
+                campground.save()
                 console.log("Create new comment")
               }
-            });
+            })
         }
       })
-    });
-  });
+    })
+  })
 }
 
-module.exports = seedDB;
+module.exports = seedDB
