@@ -3,13 +3,16 @@ ________________________________________________________________________________
 |name     |   url                  | HTTP Verb  |   description                                             |
 |---------|------------------------|------------|-----------------------------------------------------------|
 |INDEX    |   /camgrounds          |   GET      |   Display a list of all campgrounds                       |
-|NEW      |   /camgrounds/new      |   GET      |   Display a form to make a new dog                        |
+|NEW      |   /camgrounds/new      |   GET      |   Display a form to make a new campground                 |
 |CREATE   |   /camgrounds          |   POST     |   Add a new camogroung to DB                              |
 |SHOW     |   /camgrounds/:id      |   GET      |   Shows info about one campground                         |
 |EDIT     |   /camgrounds/:id/edit |   GET      |   Show edit form for one campground                       |
 |UPDATE   |   /camgrounds/:id      |   PUT      |   Update a particular campground, then redirect somewhere |
 |DESTROY  |   /camgrounds/:id      |   DELETE   |   Delete a particular campground, then redirect somewhere |
 -------------------------------------------------------------------------------------------------------------
+
+#### Project description:
+- Create and manage a campground place, adding infos and picture. Logged people can add and delete comments about your publish.
 
 #### Dependencies:
 
