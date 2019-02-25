@@ -1,14 +1,14 @@
 RESTfull Routes
-____________________________________________________________________________________________________________
-|name     |   url                  | HTTP Verb  |   description                                             |
-|---------|------------------------|------------|-----------------------------------------------------------|
-|INDEX    |   /camgrounds          |   GET      |   Display a list of all campgrounds                       |
-|NEW      |   /camgrounds/new      |   GET      |   Display a form to make a new campground                 |
-|CREATE   |   /camgrounds          |   POST     |   Add a new camogroung to DB                              |
-|SHOW     |   /camgrounds/:id      |   GET      |   Shows info about one campground                         |
-|EDIT     |   /camgrounds/:id/edit |   GET      |   Show edit form for one campground                       |
-|UPDATE   |   /camgrounds/:id      |   PUT      |   Update a particular campground, then redirect somewhere |
-|DESTROY  |   /camgrounds/:id      |   DELETE   |   Delete a particular campground, then redirect somewhere |
+_____________________________________________________________________________________________________________
+|name     |   url                   | HTTP Verb  |   description                                             |
+|---------|-------------------------|------------|-----------------------------------------------------------|
+|INDEX    |   /campgrounds          |   GET      |   Display a list of all campgrounds                       |
+|NEW      |   /campgrounds/new      |   GET      |   Display a form to make a new campground                 |
+|CREATE   |   /campgrounds          |   POST     |   Add a new camogroung to DB                              |
+|SHOW     |   /campgrounds/:id      |   GET      |   Shows info about one campground                         |
+|EDIT     |   /campgrounds/:id/edit |   GET      |   Show edit form for one campground                       |
+|UPDATE   |   /campgrounds/:id      |   PUT      |   Update a particular campground, then redirect somewhere |
+|DESTROY  |   /campgrounds/:id      |   DELETE   |   Delete a particular campground, then redirect somewhere |
 -------------------------------------------------------------------------------------------------------------
 
 #### Project description:
